@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Editing Cheatsheet</title>
+  <style>
+    body {
+        font-family: "Segoe UI", sans-serif;
+        background: #1f1f1f;
+        color: #f9f9f9;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #f9f9f9;
+        margin-bottom: 1rem;
+    }
+
+    details {
+        background: #333;
+        border: 1px solid #444;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    summary {
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    code {
+        background: #222;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+    }
+
+    ul {
+        padding-left: 1.5rem;
+    }
+
+    a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .tip {
+        background: #198b48;
+        border-left: 4px solid #afeac6;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="link">← Back To My Character Profile</a>
+  <h1>🛠️ Website Editing Cheatsheet</h1>
+  <p>Welcome! This guide will help you understand what parts of a webpage you can safely change and how to spot common problems. You don't need to be a coder - just a curious explorer!</p>
+
+  <details open>
+    <summary>🔤 What is HTML?</summary>
+    <p>HTML is the structure of a webpage - think of it like the bones of a skeleton. It tells the browser what goes where.</p>
+    <p>You can edit things like:</p>
+    <ul>
+      <li>Headings: <code>&lt;h1&gt;Welcome!&lt;/h1&gt;</code></li>
+      <li>Text content: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></li>
+      <li>Images: <code>&lt;img src="pic.jpg" alt="Nice photo"&gt;</code></li>
+      <li>Links: <code>&lt;a href="https://example.com"&gt;Visit Site&lt;/a&gt;</code></li>
+    </ul>
+    <div class="tip">Notice the opening and closing tags of some of the elements, for example: <code>&lt;h1&gt;</code>Title<code>&lt;/h1&gt;</code>.</div>
+  </details>
+
+  <details>
+    <summary>🎨 What is CSS?</summary>
+    <p>CSS is like clothing—it styles how your webpage looks.</p>
+    <p>Examples of things you can change:</p>
+    <ul>
+      <li>Text color: <code>color: red;</code></li>
+      <li>Background color: <code>background-color: #f0f0f0;</code></li>
+      <li>Fonts and spacing: <code>font-size: 20px;</code>, <code>margin: 10px;</code></li>
+    </ul>
+    <p>You will usually find CSS inside a <code>&lt;style&gt;</code> tag or in a separate <code>main.css</code> file.</p>
+
+    <div class="tip">In the <code>main.css</code> file, you'll see variables like <code>--trait-background-color</code> and <code>--text-color</code> being used. You can change these values to customise the look of your character profile page!</div>
+  </details>
+
+  <details>
+    <summary>⚙️ What is JavaScript?</summary>
+    <p>JavaScript makes the page interactive. Think of it as the brain of the webpage. For example, you can make buttons do things, or add data when you click something.</p>
+    <p>JavaScript is what makes the confetti drop<a onclick="makeItRain()">🎉</a>! You can see the code in the <code>script.js</code> file.</p>
+    <p>Try this in the browser console:</p>
+    <code>document.getElementById("traits").innerHTML += `&lt;li&gt;A New Character Trait.&lt;/li&gt;`;</code>
+    <div class="tip">💡 To open the console: Right-click → Inspect → Click "Console" tab</div>
+  </details>
+
+  <details>
+    <summary>🐞 Common Debugging Tips</summary>
+    <ul>
+      <li>Open browser tools with <strong>F12</strong> or Right-click → <strong>Inspect</strong></li>
+      <li>Check the <strong>Console</strong> for errors like missing files or typos</li>
+      <li>Use the <strong>Elements</strong> tab to explore and edit your HTML</li>
+      <li>Use the <strong>Styles</strong> tab to preview CSS changes live</li>
+      <li>Reload the page if something looks weird</li>
+    </ul>
+    <div class="tip">💡 If your image doesn't load, check that the file name matches exactly—including upper/lowercase!</div>
+  </details>
+
+  <details>
+    <summary>🎓 What More Can We Learn?</summary>
+    <p>In the Interactive Development major, students learn to become coders that make websites and apps just like this one, from scratch🤯! </p>
+    <p><b>They also learn:</b></p>
+    <ul>
+      <li>How to create <strong>databases</strong> that can save everyone's characters in the cloud.</li>
+      <li>How to work with <strong>APIs</strong> to send data from the databases to our websites.</li>
+      <li>How to use <strong>full-stack frameworks</strong> to build complex user interfaces and systems.</li>
+      <li>How to <strong>deploy & host</strong> their applications on a live URL.</li>
+      <li>How to <strong>collaborate</strong> with others on projects.</li>
+      <li>How to build <strong>mobile apps</strong> for iOS and Android.</li>
+      <li>How to create apps that use <strong>AI technologies</strong>.</li>
+      <li><b>And much, much more!</b></li>
+    </ul>
+
+    <p><b>People who thrive in dev, are people who:</b></p>
+    <ul>
+      <li>Like to problem-solve.</li>
+      <li>Like the feeling of figuring things out.</li>
+      <li>Like to tinker and experiment.</li>
+      <li>Want to create cool apps and have some awesome start-up ideas.</li>
+      <li>Enjoy learning new tech and want to be on the forefront.</li>
+      <li>Like to collaborate and share ideas with others.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🔗 Helpful Links</summary>
+    <ul>
+      <li><a class="links" href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a> – Check your HTML for errors</li>
+      <li><a class="links" href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> – The best docs for HTML, CSS, and JS</li>
+      <li><a class="links" href="https://css-tricks.com/snippets/css/" target="_blank">CSS Tricks Snippets</a> – Fast styling tips</li>
+      <li><a class="links" href="https://roadmap.sh/full-stack" target="_blank">Full-Stack Roadmap</a> – A visual guide to becoming a full-stack developer</li>
+    </ul>
+  </details>
+
+  <p style="margin-top:2rem; font-size: 0.9rem; color: #777;">Made for our team to explore what students learn in Interactive Development. 🚀</p>
+
+  <script src="../script.js"></script>
+</body>
+</html>

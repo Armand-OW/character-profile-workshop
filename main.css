@@ -1,0 +1,172 @@
+:root {
+  /* COLOURS */
+  --background-color: #1f1f1f;
+  --icon-color: #c0aede;
+  --button-color: #69d2e7;
+  --title-color: #f88c49;
+  --text-color: #fff;
+  --trait-background-color: #333;
+
+  /* FONTS */
+  /* Here are the fonts you can choose from: Bebas Neue, Borel, Roboto,  */
+  --title-font: 'Bebas Neue', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+
+  /* PICTURE FRAME */
+  --picture-border-color: #c0aede;
+  --picture-border-size: 7px;  
+  --picture-border-radius: 50%;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;   
+}
+
+.container {
+    max-width: 700px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    max-width: 250px;
+    height: auto;
+    border: var(--picture-border-size) solid var(--picture-border-color);
+    border-radius: var(--picture-border-radius);
+    background-color: var(--icon-color);
+}
+
+h1, h2, h3 {
+    padding: 10px;
+    margin: 0;
+}
+
+h1, h3 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+}
+
+h1 {
+    font-size: 32pt;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+h2 {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-family: var(--body-font);
+    color: var(--picture-border-color);
+    font-weight: 400;
+}
+
+p {
+    /* margin-top: -5px; */
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.traits {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    /* margin-top: -5px; */
+}
+
+li {
+    margin: 2.5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--trait-background-color);
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: var(--picture-border-radius);
+    cursor: pointer;
+    font-size: 16pt;
+    box-shadow: #22222292 0px 0px 10px;
+    margin-top: -50px;
+    margin-left: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 3px solid var(--button-color);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+a:hover {
+    transition: 0.1s;
+    background-color: var(--icon-color);
+    color: var(--background-color);
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--trait-background-color);
+    margin-bottom: 15px;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: var(--trait-background-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+    position: fixed;
+    z-index: 1;
+    top: 27px; /* Position above the link */
+    right: 0px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 0.9;
+}
