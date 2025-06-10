@@ -213,19 +213,19 @@ var confetti = {
 })();
 
 function makeItRain() {
-        const start = () => {
-            setTimeout(function() {
-                confetti.start()
-            }, 0); 
-        };
+	console.log("Making it rain confetti on the website!🎉");
+	const start = () => {
+		setTimeout(function() {
+			confetti.start()
+		}, 0); 
+	};
 
-        const stop = () => {
-            setTimeout(function() {
-                confetti.stop()
-            }, 500); 
-        };
-		
-		start();
-		stop();
-
+	const stop = () => {
+		setTimeout(function() {
+			confetti.stop()
+		}, 500); 
+	};
+	
+	start();
+	stop();
 }
